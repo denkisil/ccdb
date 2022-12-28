@@ -2,6 +2,8 @@
 
 Simple data storage based on JSON format.
 
+# This is ESAMScript package, so don't try to use it with CommonJS
+
 # Install
 ```
 npm i ccdb
