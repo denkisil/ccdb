@@ -1,0 +1,20 @@
+{
+  "name": "ccdb",
+  "version": "1.0.0",
+  "description": "A simple data storage based on JSON format",
+  "main": "lib/index.js",
+  "type": "module",
+  "author": "DenKisil",
+  "license": "MIT",
+  "imports":{
+    "#errors": "./lib/errors/mod.js"
+  },
+  "keywords": [
+    "node",
+    "npm",
+    "data",
+    "storage",
+    "json",
+    "db"
+  ]
+}
