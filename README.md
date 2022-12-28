@@ -2,6 +2,11 @@
 
 Simple data storage based on JSON format.
 
+# Install
+```
+npm i ccdb
+```
+
 Example of work with CCDB:
 ```js 
 import {SchemaTypes, Schema, Model, Database} from "ccdb";
@@ -22,6 +27,8 @@ let userModelTemp = {
 let userSchema = new Schema(userModelTemp);
 
 let Users = new Model("users", db.path, userSchema);
+
+db.addModel(Users.name, Users);
 
 let users = [
 	{
