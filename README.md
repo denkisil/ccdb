@@ -1,8 +1,8 @@
-# **C**onstru**c**table DB
+# Constructable DB
 
 Simple data storage based on JSON format.
 
-# This is ESMAcript package, so don't try to use it with CommonJS
+### This is ESMAScript package. if you want to use version for CommonJS, so [welcome](https://github.com/denkisil/ccdb-commonjs)
 
 # Install
 ```
