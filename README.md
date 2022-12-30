@@ -16,23 +16,23 @@ import {SchemaTypes, Schema, Model, Database} from "ccdb";
 import {fileURLToPath} from "url";
 import * as path from "path";
 
-let __filename = fileURLToPath(import.meta.url);
-let __dirname = path.dirname(__filename);
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-let db = new Database(path.join(__dirname, "db"));
+const db = new Database(path.join(__dirname, "db"));
 
-let userModelTemp = {
+const userModelTemp = {
 	id: SchemaTypes.number,
 	name: SchemaTypes.string
 }
 
-let userSchema = new Schema(userModelTemp);
+const userSchema = new Schema(userModelTemp);
 
-let Users = new Model("users", db.path, userSchema);
+const Users = new Model("users", db.path, userSchema);
 
 db.addModel(Users.name, Users);
 
-let users = [
+const users = [
 	{
 		id: 1,
 		name: "Joe"
@@ -43,11 +43,11 @@ let users = [
 	}
 ]
 
-let writed = Users.writeMany(users);
+const writed = Users.writeMany(users);
 
-let deleted = Users.deleteDocsByParam("id", 1);
+const deleted = Users.deleteDocsByParam("id", 1);
 
-let usersAll = Users.read();
+const usersAll = Users.read();
 
 console.log(users);
 
