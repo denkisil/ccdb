@@ -28,7 +28,7 @@ const userModelTemp = {
 
 const userSchema = new Schema(userModelTemp);
 
-const Users = new Model("users", db.path, userSchema);
+const Users = new Model("users", userSchema, db.path);
 
 db.addModel(Users.name, Users);
 
