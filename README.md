@@ -1,7 +1,6 @@
 # Constructable DB
 
 ![npm](https://img.shields.io/npm/v/ccdb)
-
 ![npm](https://img.shields.io/npm/dt/ccdb)
 
 Simple data storage based on JSON format.
