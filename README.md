@@ -1,5 +1,7 @@
 # Constructable DB
 
+![npm](https://img.shields.io/npm/dt/ccdb)
+
 Simple data storage based on JSON format.
 
 ### This is ESMAScript package. if you want to use version for CommonJS, so [welcome](https://github.com/denkisil/ccdb-commonjs)
