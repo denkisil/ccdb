@@ -102,6 +102,8 @@ You can see in folder `lib/examples`
 
 - `Model.getDocByParams(/*object of parameters*/)` - get document from database by object of parameters
 
+- `Model.updateDocByParams(/*object of parameters*/, /*object to get*/)` -  
+
 - `Model.deleteDocByParams(/*object of parameters*/)` - delete doc/docs by special parameter
 
 
