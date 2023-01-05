@@ -5,6 +5,7 @@
   "main": "lib/index.js",
   "type": "module",
   "author": "DenKisil",
+  "repository": "https://github.com/denkisil/ccdb",
   "license": "MIT",
   "imports": {
     "#errors": "./lib/errors/mod.js"

@@ -7,22 +7,24 @@ Simple data storage based on JSON format.
 
 ### This is ESMAScript package. if you want to use version for CommonJS, so [welcome](https://github.com/denkisil/ccdb-commonjs)
 
+## Content
+- [Install](#install)
+- [Quick Start](#quick-start-to-ccdb)
+- [Examples](#examples)
+- [API reference](#api-reference)
+
 # Install
 ```
 npm i ccdb
 ```
 
-Example of work with CCDB:
+# Quick start to CCDB:
 ```js 
 import {SchemaTypes, Schema, Model, Database} from "ccdb";
 
-import {fileURLToPath} from "url";
 import * as path from "path";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-const db = new Database(path.join(__dirname, "db"));
+const db = new Database(path.join(process.cwd(), "db"));
 
 const userModelTemp = {
 	id: SchemaTypes.number,
@@ -48,13 +50,15 @@ const users = [
 
 const writed = Users.writeMany(users);
 
-const deleted = Users.deleteDocsByParam("id", 1);
+const getByManyParams = Users.getDocByParams({id: 1, name: "Joe"});
 
-const usersAll = Users.read();
-
-console.log(users);
+console.log(getByManyParams);
 
 ```
+
+# Examples
+
+You can see in folder `lib/examples`
 
 # API reference
 
@@ -96,9 +100,9 @@ console.log(users);
 
 - `Model.writeMany(/*array of objects to write*/)` - write a array of data to database
 
-- `Model.getDocByParam(/*name of param*/, /*value of param*/)` - get document from database by special parameter
+- `Model.getDocByParams(/*object of parameters*/)` - get document from database by object of parameters
 
-- `Model.deleteDocByParam(/*name of param*/, // Model.deleteDocByParam - delete doc/docs by special parameter)` delete doc/docs by special parameter
+- `Model.deleteDocByParams(/*object of parameters*/)` - delete doc/docs by special parameter
 
 
 ## `new Schema(/*template of schema*/)` - class which makes schemas for models
