@@ -1,6 +1,6 @@
 {
   "name": "ccdb",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A simple data storage based on JSON format",
   "main": "lib/index.js",
   "type": "module",
