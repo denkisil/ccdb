@@ -50,7 +50,7 @@ const users = [
 
 const writed = Users.writeMany(users);
 
-const getByManyParams = Users.getDocByParams({id: 1, name: "Joe"});
+const getByManyParams = Users.getDocByParams({id: 1});
 
 console.log(getByManyParams);
 
