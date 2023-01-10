@@ -12,6 +12,11 @@ Simple data storage based on JSON format.
 - [Quick Start](#quick-start-to-ccdb)
 - [Examples](#examples)
 - [API reference](#api-reference)
+  - [Database](#database)
+  - [Model](#model)
+  - [Schema](#schema)
+  - [SchemaFields](#schemafields)
+  - [FS](#fs)
 
 # Install
 ```
@@ -22,13 +27,19 @@ npm i ccdb
 ```js 
 import {SchemaTypes, Schema, Model, Database} from "ccdb";
 
-import * as path from "path";
+import path from "path";
 
 const db = new Database(path.join(process.cwd(), "db"));
 
 const userModelTemp = {
-	id: SchemaTypes.number,
-	name: SchemaTypes.string
+	id: {
+		type: SchemaTypes.number,
+		required: true
+	},
+	name: {
+		type: SchemaTypes.string,
+		required: true
+	}
 }
 
 const userSchema = new Schema(userModelTemp);
@@ -76,6 +87,7 @@ You can see in folder `lib/examples`
 #### Methods
 - `Database.addModel(/*name of model*/, /*instance of Model's class*/)` - adds a new model to database and creates a file of model
 
+## Model
 
 ## `new Model(/*name of model*/, /*model's schema*/, /*path, where database placed*/)` - class for making models.
 
@@ -102,10 +114,11 @@ You can see in folder `lib/examples`
 
 - `Model.getDocByParams(/*object of parameters*/)` - get document from database by object of parameters
 
-- `Model.updateDocByParams(/*object of parameters*/, /*object to get*/)` -  
+- `Model.updateDocByParams(/*object of parameters*/, /*object to get*/)` - update document in database, which goted by few parameters
 
 - `Model.deleteDocByParams(/*object of parameters*/)` - delete doc/docs by special parameter
 
+## Schema
 
 ## `new Schema(/*template of schema*/)` - class which makes schemas for models
 
@@ -113,6 +126,19 @@ You can see in folder `lib/examples`
 
 - `Schema.schema` - template of schema
 
+## SchemaField
+
+## `new SchemaField(/*object to make instance*/)` - class of schema field
+
+### Parameters
+
+- `SchemaField.type` - data type, required by schema field; required option
+
+- `SchemaField.required` - it check needest filling of this field; in default `false`
+ 
+- `SchemaField.defaultValue` - value, which inserts to field, if it not required; in default `null`
+
+## FS
 
 ## `new FS()/*(FileSystem)*/` - class for direct control on the database files
 
