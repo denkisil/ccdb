@@ -11,6 +11,7 @@
     "#errors": "./lib/errors/mod.js"
   },
   "keywords": [
+    "esmascript",
     "node",
     "npm",
     "data",

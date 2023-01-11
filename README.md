@@ -15,7 +15,7 @@ Simple data storage based on JSON format.
   - [Database](#database)
   - [Model](#model)
   - [Schema](#schema)
-  - [SchemaFields](#schemafields)
+  - [SchemaFields](#schemafield)
   - [FS](#fs)
 
 # Install
