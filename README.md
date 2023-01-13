@@ -157,3 +157,4 @@ You can see in folder `lib/examples`
 - `FS.addDatabaseFile(/*name of database file*/, /*schema of database file*/)` - adds new database file
 
 - `FS.clearDatabaseData(/*path to database file*/)` - clears all data in database file
+- `FS.femoveDoc(/*path to database file*/ /*document to delete*/)` - delete doc/docs from database
