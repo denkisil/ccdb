@@ -3,6 +3,9 @@
 ![npm](https://img.shields.io/npm/v/ccdb)
 ![npm](https://img.shields.io/npm/dt/ccdb)
 
+<iframe src="https://discord.com/widget?id=1062708343522734110&theme=dark" width="150" height="200" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+
+![image](static/ccdb_logo_minified.png)
 Simple data storage based on JSON format.
 
 ### This is ESMAScript package. if you want to use version for CommonJS, so [welcome](https://github.com/denkisil/ccdb-commonjs)
