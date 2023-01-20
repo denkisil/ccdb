@@ -3,7 +3,7 @@
 ![npm](https://img.shields.io/npm/v/ccdb)
 ![npm](https://img.shields.io/npm/dt/ccdb)
 
-![discord}(https://discord.com/widget?id=1062708343522734110&theme=dark)
+![discord](https://discord.com/widget?id=1062708343522734110&theme=dark)
 
 ![image](static/ccdb_logo_minified.png)
 Simple data storage based on JSON format.
