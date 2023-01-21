@@ -3,6 +3,7 @@
   "version": "1.4.0",
   "description": "A simple data storage based on JSON format",
   "main": "lib/index.js",
+  "readmeFile": "README.md",
   "type": "module",
   "author": "DenKisil",
   "repository": "https://github.com/denkisil/ccdb",
