@@ -5,8 +5,6 @@
 
 ![image](static/ccdb_logo_minified.png)
 
-[Discord Server](https://discord.gg/5hqUtn7Z)
-
 Simple data storage based on JSON format.
 
 ### This is ESMAScript package. if you want to use version for CommonJS, so [welcome](https://github.com/denkisil/ccdb-commonjs)
@@ -136,11 +134,21 @@ You can see in folder `lib/examples`
 
 ### Parameters
 
-- `SchemaField.type` - data type, required by schema field; required option
+- `SchemaField.type` - value type for validating data; required option
 
-- `SchemaField.required` - it check needest filling of this field; in default `false`
+- `SchemaField.required` - value requires to insert or not; in default `false`
  
-- `SchemaField.defaultValue` - value, which inserts to field, if it not required; in default `null`
+- `SchemaField.defaultValue` - vvalue will insert when no have value to insert; in default `null`
+
+- `SchemaField.maxStringLength` - string value length don't be more that specified; default `2**53-1`
+
+- `SchemaField.minStringLength` -  string value length don't be less that specified; default `0`
+
+- `SchemaField.maxNumValue` - number value don't be more that specified; default `2**53-1`
+
+- `SchemaField.minNumValue` - number value don't be less that specified; default `2**53-1`
+
+- `SchemaField.unique` - one value for one field if true; default `false`
 
 ## FS
 
@@ -161,4 +169,5 @@ You can see in folder `lib/examples`
 - `FS.addDatabaseFile(/*name of database file*/, /*schema of database file*/)` - adds new database file
 
 - `FS.clearDatabaseData(/*path to database file*/)` - clears all data in database file
-- `FS.femoveDoc(/*path to database file*/ /*document to delete*/)` - delete doc/docs from database
+
+- `FS.removeDoc(/*path to database file*/ /*document to delete*/)` - delete doc/docs from database
